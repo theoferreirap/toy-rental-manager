@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1779375421164,
+      "tag": "0000_shallow_ink",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1779375574196,
+      "tag": "0001_bright_sentinel",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1779375681876,
+      "tag": "0002_brief_clint_barton",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1779376943164,
+      "tag": "0003_brave_old_lace",
+      "breakpoints": true
+    }
+  ]
+}
