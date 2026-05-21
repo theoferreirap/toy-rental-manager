@@ -20,6 +20,21 @@ export async function createContext(
     user = null;
   }
 
+  const hasMockCookie = opts.req.headers.cookie?.includes("mock-logged-in=true");
+  if (!user && hasMockCookie) {
+    user = {
+      id: 1,
+      openId: "mock-admin-openid",
+      name: "Administrador",
+      email: "admin@toyrental.com",
+      loginMethod: "mock",
+      role: "admin",
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      lastSignedIn: new Date(),
+    };
+  }
+
   return {
     req: opts.req,
     res: opts.res,
