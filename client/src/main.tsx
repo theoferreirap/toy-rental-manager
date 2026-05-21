@@ -12,13 +12,7 @@ const queryClient = new QueryClient();
 
 const redirectToLoginIfUnauthorized = (error: unknown) => {
   if (!(error instanceof TRPCClientError)) return;
-  if (typeof window === "undefined") return;
-
-  const isUnauthorized = error.message === UNAUTHED_ERR_MSG;
-
-  if (!isUnauthorized) return;
-
-  window.location.href = getLoginUrl();
+  console.warn("[Unauthorized API Call] Bypassed redirect, staying in mock mode:", error.message);
 };
 
 queryClient.getQueryCache().subscribe(event => {
