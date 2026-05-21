@@ -20,21 +20,6 @@ export async function createContext(
     user = null;
   }
 
-  // Sempre fornece um usuário mock de administrador para permitir acesso direto sem tela de login externa
-  if (!user) {
-    user = {
-      id: 1,
-      openId: "mock-admin-openid",
-      name: "Administrador",
-      email: "admin@toyrental.com",
-      loginMethod: "mock",
-      role: "admin",
-      createdAt: new Date(),
-      updatedAt: new Date(),
-      lastSignedIn: new Date(),
-    };
-  }
-
   return {
     req: opts.req,
     res: opts.res,
