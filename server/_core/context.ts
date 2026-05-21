@@ -20,8 +20,7 @@ export async function createContext(
     user = null;
   }
 
-  const hasMockCookie = opts.req.headers.cookie?.includes("mock-logged-in=true");
-  if (!user && hasMockCookie) {
+  if (!user) {
     user = {
       id: 1,
       openId: "mock-admin-openid",

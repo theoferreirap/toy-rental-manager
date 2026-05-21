@@ -84,14 +84,8 @@ export function AppLayout({ children }: AppLayoutProps) {
           <p className="mb-8 text-muted-foreground">
             Sistema completo de gestão de aluguel de brinquedos infláveis
           </p>
-          <Button
-            size="lg"
-            onClick={() => {
-              document.cookie = "mock-logged-in=true; path=/; max-age=31536000";
-              window.location.reload();
-            }}
-          >
-            Entrar com Manus
+          <Button asChild size="lg">
+            <a href={getLoginUrl()}>Entrar com Manus</a>
           </Button>
         </div>
       </div>
